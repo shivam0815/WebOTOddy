@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Gradient Text */
+.gradient-text {
+  @apply bg-gradient-to-r from-emerald-500 to-teal-500 text-transparent bg-clip-text;
+}
+
+/* Gradient Background (for icons/cards) */
+.gradient-bg {
+  @apply bg-gradient-to-r from-emerald-500 to-teal-500;
+}
+
+/* Primary Button */
+.btn-primary {
+  @apply px-6 py-3 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-500 
+         text-white font-semibold shadow-lg transition transform hover:scale-105;
+}
+
+/* Secondary Button */
+.btn-secondary {
+  @apply px-6 py-3 rounded-2xl bg-gray-100 text-gray-800 font-semibold 
+         shadow-md hover:bg-gray-200 transition;
+}
+@keyframes gradientMove {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+.animate-gradient-move {
+  background-size: 200% 200%;
+  animation: gradientMove 7s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0);}
+  50% { transform: translateY(-8px);}
+}
+.animate-float { animation: float 2.2s ease-in-out infinite; }
+@keyframes fadeIn { 0% { opacity:0;} 100% {opacity:1;} }
+.animate-fade-in { animation: fadeIn 1s ease-in;}
+@keyframes slideIn { 0% { transform: translateX(80px); opacity:0;} 100% {transform: translateX(0); opacity:1;} }
+.animate-slide-in { animation: slideIn 1.3s cubic-bezier(0.22, 1, 0.36, 1);}
