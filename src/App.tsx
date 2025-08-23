@@ -12,10 +12,12 @@ import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
 import Support from './pages/Support';
 import Safety from './pages/Safety';
+import ScrollToTop from './pages/ScrollToTop';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop /> {/* <-- Add this */}
       <div className="min-h-screen bg-white">
         <Header />
         <main>
@@ -25,12 +27,11 @@ function App() {
             <Route path="/features" element={<Features />} />
             <Route path="/about" element={<About />} />
             <Route path="/DriverApplication" element={<DriverApplication />} />
-
             <Route path="/app-features" element={<AppFeatures />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/support" element={<Support />} />
-            <Route path="/safety" element={<Safety/>}/>
+            <Route path="/safety" element={<Safety />} />
           </Routes>
         </main>
         <Footer />

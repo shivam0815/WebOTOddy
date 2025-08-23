@@ -49,7 +49,7 @@ const team: TeamMember[] = [
   {
     name: "Shashank Pandey",
     role: "Co-Founder & CEO",
-    image: "/ss.JPG",
+    image: "/ss.webp",
     description: "Software Engineer",
     linkedin: "https://www.linkedin.com/in/pandey-shashank-shekhar",
     github: "https://github.com/shashankfzb",
@@ -57,7 +57,7 @@ const team: TeamMember[] = [
   {
     name: "Mohit Makhijani",
     role: "Co-Founder & CTO",
-    image: "/mt.jpeg",
+    image: "/mt.webp",
     description: "Software Engineer",
     linkedin: "https://www.linkedin.com/in/mohit-makhijani-621abb296",
     github: "https://github.com/MohitMakhijani",
@@ -65,7 +65,7 @@ const team: TeamMember[] = [
   {
     name: "Shivam Shukla",
     role: "Co-Founder & COO",
-    image: "/SHIVA.JPG",
+    image: "/SHIVA.webp",
     description: "Software Engineer",
     linkedin: "https://www.linkedin.com/in/shivam-shukla-432068226/",
     github: "https://github.com/shivam0815",
