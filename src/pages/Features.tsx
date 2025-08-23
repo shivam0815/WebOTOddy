@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import {
-  DollarSign,
+  
   Shield,
   MapPin,
   Phone,
@@ -18,6 +18,9 @@ import {
   TrendingUp,
   Settings,
   Calendar,
+  IndianRupee,
+  Send,
+   
 } from "lucide-react";
 
 const Seo = ({
@@ -43,15 +46,15 @@ const Features = () => {
   const [showDownloadModal, setShowDownloadModal] = useState(false);
 
   const features = [
-    {
-      icon: Car,
-      title: "Drive Your Way",
+   {
+      icon:IndianRupee,
+      title: "Set Your Rate",
       description:
-        "Use your own car with a professional driver—comfort, control, and convenience in one.",
-      color: "from-amber-400 to-amber-600",
+        "Drivers set their own hourly charge, giving you flexibility and transparency.",
+      color: "from-emerald-400 to-emerald-600",
     },
     {
-      icon: DollarSign,
+      icon: Send,
       title: "Choose Driver",
       description:
         "Choose the right driver for your journey—compare budgets, check reviews and ratings, and explore detailed driver profiles before booking.",
@@ -158,13 +161,20 @@ const Features = () => {
         "Detailed insights into your travel patterns, expenses, and carbon footprint.",
       color: "from-sky-400 to-sky-600",
     },
-    {
-      icon: DollarSign,
-      title: "Set Your Rate",
+
+
+
+{
+      icon: Car,
+      title: "Drive Your Way",
       description:
-        "Drivers set their own hourly charge, giving you flexibility and transparency.",
-      color: "from-emerald-400 to-emerald-600",
+        "Use your own car with a professional driver—comfort, control, and convenience in one.",
+      color: "from-amber-400 to-amber-600",
     },
+
+
+
+    
     {
       icon: Car,
       title: "Your Car, Your Control",
