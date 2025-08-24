@@ -19,7 +19,7 @@ const Seo: React.FC<SEOProps> = ({
   author = "Otoddy",
   keywords = "",
 }) => {
-  const absoluteImageUrl = `https://yourdomain.com${image}`; // Replace with your real domain
+  const absoluteImageUrl = `https://otoddy.com${image}`; // Replace with your real domain
 
   return (
     <Helmet htmlAttributes={{ lang: "en" }}>
