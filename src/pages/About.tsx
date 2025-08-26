@@ -5,11 +5,7 @@ import Seo from "../components/Seo";
 import { db } from "../firebaseConfig";
 import { collection, addDoc, onSnapshot } from "firebase/firestore";
 
-type Value = {
-  icon: React.FC<{ className?: string }>;
-  title: string;
-  description: string;
-};
+
 type TeamMember = {
   name: string;
   role: string;
@@ -24,26 +20,7 @@ type JourneyStep = {
   description: string;
 };
 
-const values: Value[] = [
-  {
-    icon: Heart,
-    title: "Empathy",
-    description:
-      "We understand the daily struggles of commuting and strive to make every journey comfortable and stress-free.",
-  },
-  {
-    icon: Shield,
-    title: "Safety",
-    description:
-      "Safety is never compromised. Every driver, every ride, every detail is designed with your security in mind.",
-  },
-  {
-    icon: Target,
-    title: "Transparency",
-    description:
-      "No hidden fees, no surprise charges. Complete transparency in pricing, policies, and operations.",
-  },
-];
+
 
 const team: TeamMember[] = [
   {

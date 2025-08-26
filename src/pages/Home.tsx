@@ -61,34 +61,35 @@ const Home: React.FC = () => {
     },
   ];
 
-  const handleJoinWaitlist = async () => {
-    setSuccess("");
-    setErrorMsg("");
+ const handleJoinWaitlist = async () => {
+  setSuccess("");
+  setErrorMsg("");
 
-    if (!email || !/^\S+@\S+\.\S+$/.test(email)) {
-      setErrorMsg("Please enter a valid email address.");
-      return;
-    }
+  if (!email || !/^\S+@\S+\.\S+$/.test(email)) {
+    setErrorMsg("Please enter a valid email address.");
+    return;
+  }
 
-    setLoading(true);
-    try {
-      await addDoc(collection(db, "waitlist"), {
-        email,
-        createdAt: serverTimestamp(),
-      });
-      setSuccess("Successfully joined the waitlist! 🎉");
-      setEmail("");
-    } catch (err: unknown) {
-      const message =
-        typeof err === "object" && err && "message" in err
-          ? (err as any).message
-          : "Something went wrong. Please try again.";
-      console.error("Firestore addDoc error:", err);
-      setErrorMsg(message);
-    } finally {
-      setLoading(false);
+  setLoading(true);
+  try {
+    await addDoc(collection(db, "waitlist"), {
+      email,
+      createdAt: serverTimestamp(),
+    });
+    setSuccess("Successfully joined the waitlist! 🎉");
+    setEmail("");
+  } catch (err: unknown) {
+    let message = "Something went wrong. Please try again.";
+    if (err instanceof Error) {
+      message = err.message;
     }
-  };
+    console.error("Firestore addDoc error:", err);
+    setErrorMsg(message);
+  } finally {
+    setLoading(false);
+  }
+};
+
 
   const scrollToJoin = () => {
     joinRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
